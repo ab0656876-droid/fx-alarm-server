@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: fx-alarm-server
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: TWELVEDATA_API_KEY
+        sync: false
